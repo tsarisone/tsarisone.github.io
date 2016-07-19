@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="../css/bootstrap.css" rel="stylesheet"> 
+    <link href="../css/animates/animate.min.css" rel="stylesheet" type="text/css"> 
+    <link href="../ico/favicon.png" rel="shortcut icon" type="image/png">
+	<link href="css/reg.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Регистрация</title>
+</head>
+<body>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="../index.html">Quadrohacker's blog</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+          <span class="sr-only">Открыть навигацию</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="responsive-menu">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Главная</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Контакты <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://www.linkedin.com/in/quadrohacker">LinkedIn</a></li>
+              <li class="divider"></li>
+              <li><a href="https://www.facebook.com/alex.ss.02">Facebook</a></li>
+              <li><a href="https://www.twitter.com/quadrohacker">Twitter</a></li>
+              <li><a href="https://www.vk.com/just_tsar">Vkontakte</a></li>
+            </ul>
+          </li>
+          <li><a href="http://codepen.io/quadrohacker/" target="_blank">Портфолио</a></li>
+          <li><a href="reg/reg.html">Регистрация</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="starter-template">
+      <h1>Заполните форму регистрации</h1>
+      <p>При этом Вы обязуетесь придерживаться наших <a href="#" class="lead">правил</a></p>
+    </div>
+  </div>
+    <div>
+        <div>
+            <form action="reg.php" method="POST" onsubmit="return f_test_form();" autocomplete="off" enctype="multipart/form-data">
+                <div class="lab">
+                    <label for="login">Логин<span id="reqstar">*</span>:</label>
+                    <input type="text" name="login" maxlength="20" id="login" class="pole" autofocus required><span class="add-on"><span class="glyphicon glyphicon-name"></span></span>
+                </div>
+                <div class="lab">
+                    <label for="pass1">Пароль<span id="reqstar">*</span>:</label>
+                    <input type="password" name="pass1" id="pass1" class="pole" required>
+                </div>
+                <div class="lab">
+                    <label for="pass2">Повторите пароль<span id="reqstar">*</span>:</label>
+                    <input type="password" name="pass2" id="pass2" class="pole" required>
+                </div>
+                <div class="lab">
+                    <label for="email" class="biglabel">Ваш электронный адрес<span id="reqstar">*</span>:</label>
+                    <input type="email" name="email" maxlength="30" id="email" class="pole" required>
+                </div>
+                <div class="lab input-prepend">
+                    <label for="phone" class="biglabel">Ваш номер телефона:</label><br>
+                    <span class="add-on">+380</span><input type="text" name="phone" maxlength="30" placeholder="0636667700" id="phone" class="pole" required>
+                </div>
+                <div class="lab">
+                    <label>Укажите Ваш пол:</label><br>
+                    <input type="radio" name="radio" id="male" value="male" checked>Муж.
+                    <input type="radio" name="radio" id="female" value="female">Жен.
+                </div>
+                <div class="lab">
+                    <label for="age" class="biglabel">Укажите Ваш возраст<span id="reqstar">*</span>:</label>
+                    <input type="number" min="0" max="200" name="age" id="age" class="pole" style="width: 40px" required>
+                </div>
+                <div class="lab">
+                    <label for="education">Образование<span id="reqstar">*</span>:</label>
+                    <select name="education[]" id="education" required>
+                        <option value="">Не выбрано</option>
+                        <option value="1">Среднее</option>
+                        <option value="2">Средне-техническое</option>
+                        <option value="3">Высшее</option>
+                </select>
+                </div>
+                <div class="lab">
+                    <label for="browser" class="biglabel">Ваш Web-обозреватель:</label>
+                    <datalist id="browsers">
+                        <option value="Internet Explorer"></option>
+                        <option value="Firefox"></option>
+                        <option value="Chrome"></option>
+                        <option value="Opera"></option>
+                        <option value="Safari"></option>
+                    </datalist>
+                    <input type="text" name="browser" list="browsers" placeholder="Ваш Web-обозреватель">
+                </div>
+                <div class="lab">
+                    <label for="comment">Комментарий:</label>
+                    <textarea name="comment" id="comment" cols="15" rows="10" maxlength="300" placeholder="Введите не более 300 символов"></textarea>
+                </div>
+                <div class="lab">
+                    <label for="userfile">Ваше фото:
+                    <input type="file" name="userfile" id="userfile"></label>
+                </div>
+                <div class="lab">
+                    <label class="biglabel">Что вы любите в создании сайта больше?:</label><br>
+                    <input type="checkbox" name="check[]" value="1">HTML<br>
+                    <input type="checkbox" name="check[]" value="2">CSS<br>
+                    <input type="checkbox" name="check[]" value="3">JS, PHP, MySQL<br>
+                    <input type="checkbox" name="check[]" value="4" checked>Не умею создавать сайты
+                </div>
+                <div class="lab">
+                    <label for="rule" class="biglabel">С <a href="#">правилами сайта</a> согласен<span id="reqstar">*</span>:</label>
+                    <input type="checkbox" name="rule" id="rule" value="yes" required>
+                </div>
+                <div class="lab">
+                    <input type="submit" value="Отправить" style="margin-left: 150px" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/bootstrap.js"></script>
+</body>
+</html>
