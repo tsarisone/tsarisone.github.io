@@ -4,7 +4,7 @@
 }
 body {
     margin: 2;
-    background-image: url(file:///D:/tsar/html/html/images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-attachment: fixed;
     font-size: 14px;
     font-family: Oxygen, "Arial", sans-serif;
