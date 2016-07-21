@@ -20,12 +20,13 @@ $(document).ready(function(){
   $('.quantity').on('focus', function() {
     $(this).val('1');
   });
+  
   var amountBooks = 0;
   var totalBooksPrice = 0;
   $('.book').on('click', function(){
     amountBooks += 1;
     totalBooksPrice += $(this).data('price');
-    $('.books-buy').append('<p>' + amountBooks + '. ' + $(this).data('name') + ' &mdash; ' + $(this).data('price') + '</p>');
+    $('.books-buy').append('<p>' + amountBooks + '. ' + $(this).data('name') + ' &mdash; $' + $(this).data('price') + '</p>');
     $('.total-books-price').addClass('price-blinked');
     $('.total-books-price').text(totalBooksPrice);
   });
@@ -36,5 +37,7 @@ $(document).ready(function(){
     $(this).find('.sale').hide('fast');
   });
   
-  
+  $('.download > a').on('click', function() {
+    $('.download-books').text(+$('.download-books').text() + 1);
+  });
 });
