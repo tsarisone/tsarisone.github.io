@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <link href="css/bootstrap.css" rel="stylesheet"> 
@@ -42,7 +42,7 @@
   <div class="container-fluid">
     <div class="first">
       <h1 class="welcome-signup-h1">Справочник по HTML и CSS</h1>
-      <p class="welcome-signup-p">Зарегистрируйся прямо сейчас и получи <span>дополнительные</span> бонусы</p>
+      <p class="welcome-signup-p">Зарегистрируйся прямо сейчас и получи дополнительные бонусы</p>
       <a href="reg/reg.html" class="btn btn-large btn-success">Sign up</a>
     </div>
     <h4>Ниже Вы можете лицезреть прекрасную персону, необычайного прогера и веб-дизайнера. Перед Вами &nbsp;&mdash; Александр:</h4>
@@ -98,58 +98,60 @@
     </div>
     
     <div id="tour">
-      <h2>United Arab Emirates, Dubai</h2>
-      <h4>The greatest city in the world</h4>
+      <h2>Объединённые Арабские Эмираты, Дубай</h2>
+      <h4>Самый богатый город в мире</h4>
       <button>
-        See these pretty photos<br>
-        or price on tickets to flight there
+        <h4>Посмотреть фото в Дубае</h4>
       </button>
       <div class="photos-tour">
         <div>
           <img src="images/cities/Dubai in day.jpg" alt="Here is Dubai in day">
-          <span>Here is Dubai in day</span>
+          <span>Это Дубай днём</span>
         </div>
         <div>
           <img src="images/cities/Dubai in night.jpg" alt="Here is Dubai in night">
-          <span>Here is Dubai in night</span>
+          <span>Это Дубай ночью</span>
         </div>
         <div>
           <img src="images/cities/Dubai police car.jpg" alt="Here is Dubai police car">
-          <span>Here is Dubai police car</span>
+          <span>Это полицейская машина в Дубае</span>
         </div>
-      </div>
-      <div class="vacation" data-price="399.99">
-        <h2>Dubai vacation</h2>
-        <h4>$399.99 per ticket</h4>
-        <p>
-          Tickets:
-          <input type="number" class="quantity" value ="1" maxlength="3">
-        </p>
-        <h4>Total price: $<span id="total">399.99</span></h4>
       </div>
     </div>
     
     <div class="books">
-      <h1>Buy one of these books to begin learn Front-end</h1><br>
-      <div class="book" data-price="49" data-name="O'REILLY | HTML5 Разработка приложений для мобильных телефонов">
+      <h1>Купи любую из этих книг для изучения Front-end</h1><br>
+      <div class="book" data-price="49" data-name="book-html">
         <img src="images/books/01f19ab51df4cdbdd91b91b8218.jpg" alt="">
         <img class="sale" src="images/books/sale_30_percent.png" alt="">
       </div>
-      <div class="book" data-price="110" data-name="O'REILLY | CSS The missing manual">
+      <div class="book" data-price="110" data-name="book-css">
         <img src="images/books/mcfarland_css_the_missing_manual.jpg" alt="">
       </div>
-      <div class="book" data-price="99" data-name="O'REILLY | PHP, MySQL, Javascript, CSS, HTML5">
+      <div class="book" data-price="99" data-name="book-php">
         <img src="images/books/nikson_sozdayom_dinamicheskie_sayty_s_pomoschu_php_mysql_javascript_css_i_html5.jpg" alt="">
         <img class="sale" src="images/books/sale_30_percent.png" alt="">
       </div>
     </div>
     
-    <div class="row">
-     <div class="col-md-offset-4 col-md-6 col-sm-offset-3 col-sm-7 books-box">
-       <h3>Here will be showed your chosen books:</h3>
-       <div class="books-buy"></div>
-       <h2>You have to pay $<span class="total-books-price">0</span></h2>
-     </div>
+    <div class="row books-price">
+      <div class="col-md-offset-4 col-md-6 col-sm-offset-3 col-sm-7 books-box col-xs-offset-1 col-xs-10">
+        <h3>Здесь будут показаны выбранные вами книги:</h3>
+        <p>1. O'REILLY | HTML5 Разработка приложений для мобильных телефонов — $49</p>
+        <p>
+          <span>Кол-во:</span><input type="number" id="input-book-html" data-name="book-html" data-price="49" value="0" placeholder="">
+        </p>
+        <p>2. O'REILLY | CSS The missing manual — $110</p>
+        <p>
+          <span>Кол-во:</span><input type="number" id="input-book-css" data-name="book-css" data-price="110" value="0" placeholder="">
+        </p>
+        <p>3. O'REILLY | PHP, MySQL, Javascript, CSS, HTML5 — $99</p>
+        <p>
+          <span>Кол-во:</span><input type="number" id="input-book-php" data-name="book-php" data-price="99" value="0" placeholder="">
+        </p>
+        <div class="books-buy"></div>
+        <h2>Вы должны заплатить $<span class="total-books-price price-blinked">0</span></h2>
+      </div>
     </div>
   
     <h1><center>Основные принципы HTML</center></h1>
