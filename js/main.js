@@ -1,4 +1,4 @@
-$(document).ready(function () {
+var main = function() {
 
   $('#tour > button').on('click', function () {
     $('.photos-tour').slideToggle();
@@ -77,5 +77,32 @@ $(document).ready(function () {
   $('.download > a').on('click', function () {
     $('.download-books').text(+$('.download-books').text() + 1);
   });
+
+  $('.btn-message').addClass('disabled');
+  $('.btn-message').click( function() {
+    var post = $('.status-box').val();
+    $('<li>').text(post).prependTo('.posts');
+    $('.status-box').val('');
+    $('.counter').text("140");
+    $('.btn-message').addClass('disabled');
+    });  
+  $('.status-box').keyup( function() {
+    var postLength = $(this).val().length;
+    var charactersLeft = 140 - postLength;
+    $('.counter').text(charactersLeft);
+    if(charactersLeft < 0) {
+      $('.btn-message').addClass('disabled'); 
+      $('.counter').addClass('red-counter');
+    }
+    else if(charactersLeft == 140) {
+      $('.btn-message').addClass('disabled');
+    }
+    else {
+      $('.btn-message').removeClass('disabled');
+      $('.counter').removeClass('red-counter');
+    }
+  });
   
-});
+};
+
+$(document).ready(main);

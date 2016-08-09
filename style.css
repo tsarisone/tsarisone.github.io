@@ -24,7 +24,7 @@ header {
 body {
   margin: 0px;
   color: black;
-  background-color: #96CDCD;
+  background-color: #fff;
   background-image: url("images/background.jpg"); 
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -188,6 +188,9 @@ a.btn-success:hover {
   box-shadow: 0px 0px 10px #000;
   border-radius: 5px;
 }
+.books-price {
+  margin-bottom: 50px;
+}
 .books-price input {
   margin: 5px 20px;
   width: 30px;
@@ -204,6 +207,49 @@ a.btn-success:hover {
 .price-blinked {
   color: darkslategray;
   text-shadow: 0px 0px 6px #fff;
+}
+.status-box {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #999;
+  border-radius: 7px;
+  outline: none;
+  -webkit-transition: 0.25s ease-out;
+  -moz-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+}
+.status-box:focus {
+  border: 1px solid #66afe9;
+  box-shadow: 0px 0px 3px 0px #66afe9;
+}
+.counter {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+.red-counter {
+  color: red;
+}
+.posts {
+  clear: both;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 50px;
+  width: 100%;
+}
+.posts li {
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  min-height: 42px;
 }
 .download img {
   width: 50px;
@@ -233,9 +279,4 @@ a#wikihtml:link {
 }
 a#wikihtml:visited {
   color: red;
-}
-
-
-.books-price {
-  margin-bottom: 50px;
 }
